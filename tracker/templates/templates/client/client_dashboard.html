@@ -1,0 +1,104 @@
+{% extends '../base_with_content.html' %}
+{% block content %}
+<div class="container">
+    <h1>Your Dashboard</h1>
+    <p>Welcome, This is your Dashboard.</p>
+
+    <div class="row">
+        <!-- Food Orders -->
+        <div class="col-sm-6 mx-auto">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title mx-auto">Hot Food Orders</h5>
+            </div>          
+            <div class="card-body">
+              <p class="card-text mx-auto">Takes you to a page where you can create and track customer orders</p>
+              <a href="{% url 'orders' user.id %}" type="button" class="btn btn-primary mx-auto">Go</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <!-- Create Budget -->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Create Budget</h5>
+        </div>     
+        <div class="card-body">
+          <p class="card-text">Takes you to a page that allows you to define a new budget</p>
+          <a href="{% url 'set_budget' %}" type="button" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <!-- View budget -->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">View Budget</h5>
+        </div>     
+        <div class="card-body">
+          <p class="card-text">Takes you to a page that allows you to view your budget</p>
+          <a href="{% url 'view_budgets' user.id %}" type="button" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  <div class="row">
+          <!-- View Statistics -->
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Statistics</h5>
+              </div>     
+              <div class="card-body">
+                <p class="card-text">Takes you to a page that displays statistics on your transactions</p>
+                <a href="{% url 'statistics' user.id %}" type="button" class="btn btn-primary">Go</a>
+              </div>
+            </div>
+          </div>
+          <!-- Create new Category -->
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Create Category</h5>
+              </div>     
+              <div class="card-body">
+                <p class="card-text">Takes you to a page that allows you to define a new category</p>
+                <a href="{% url 'create_category' %}" type="button" class="btn btn-primary">Go</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    <div class="row">
+      <!-- Loan Calculator -->
+      <div class="col-sm-6">
+          <div class="card">
+              <div class="card-header">
+                  <h5 class="card-title">Loan Calculator</h5>
+              </div>
+            <div class="card-body">
+              <p class="card-text">You can calculate loan and interest payment by this calculator</p>
+              <a class="btn btn-primary" href="./../game/loan_index">Go</a>
+            </div>
+          </div>
+        </div>
+              <!-- Leaderboard -->
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">LeaderBoard</h5>
+          </div>     
+          <div class="card-body">
+            <p class="card-text">Takes you to a leaderboard showing your ranking among all the other users</p>
+            <a  class="btn btn-primary" href="./../game/index" type = "button" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

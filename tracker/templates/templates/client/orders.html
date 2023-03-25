@@ -1,0 +1,46 @@
+{% extends '../base_with_content.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Food Orders</h1>
+      <form action="{% url 'orders' user.id %}" method="post">
+      <div class="row mx-auto">
+        {% for field in form %}
+            <div class="col">
+              {% include '../custom_field.html' with form=form field=field %}
+              <div class="text-danger">
+                {{ field.errors }}
+              </div>
+            </div>
+            {% endfor %}
+            <div class="col">
+            <input type="submit" value="Add" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+
+      <table class="table align-middle table-striped table-hover">
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Table Number</th>
+          <th>Complete</th>
+
+        </tr>
+        {% for order in orderss %}
+          <tr>
+            <td>{{ order.item }} </td>
+            <td>{{ order.numberOfItems }} </td>
+            <td>{{ order.tableNumber }} </td>
+            <td style="border: 0">
+              <form action = "{%url 'complete_order' order.id %}" method = "post">
+                {% csrf_token %} 
+                <input type = "submit" value = "Complete" class="btn btn-secondary">
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+{% endblock %}

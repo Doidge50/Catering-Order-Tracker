@@ -1,0 +1,115 @@
+
+
+body {
+    min-height: 101vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-bottom: 21px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+h4 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: medium;
+}
+
+/*
+Header
+*/
+
+#header {
+    background-color:#e9ecef;
+    margin-bottom: 31px !important;
+}
+
+#header .nav-item {
+    font-family: "Courier New" !important;
+    font-size: 16px !important;
+}
+
+#header .nav-item:hover {
+    text-decoration: underline;
+}
+
+#header span {
+    font-family: "Courier New";
+    font-size: large;
+    margin-left: -11px;
+}
+
+/*
+Footer
+*/
+
+#footer {
+    background-color:#e9ecef;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+#footer span {
+    color: #717273;
+    font-weight: 501;
+    font-size: small;
+    font-family: "Courier New";
+}
+
+/*
+Forms
+*/
+
+form label {
+    font-family: Arial, sans-serif;
+    font-size: medium;
+}
+
+.underfield-label {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-family: Arial, sans-serif !important;
+    font-size: small !important;
+    font-weight: 101 !important;
+    color:rgb(92, 91, 90) !important;
+}
+
+#search_bar {
+    margin-bottom: 14px;
+}
+
+/*
+Dashboard
+*/
+
+.row {
+    margin-bottom: 24px !important;
+}

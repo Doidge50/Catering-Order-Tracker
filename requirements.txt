@@ -1,0 +1,6 @@
+
+Django
+Faker
+django-widget-tweaks==1.4.12
+matplotlib
+coverage==6.5.0
